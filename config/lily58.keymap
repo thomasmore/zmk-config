@@ -35,12 +35,12 @@
       combo_copy_terminal {
         timeout-ms = <50>;
 	key-positions = <38 39>;
-	bindings = <&kp LC(LS(C));
+	bindings = <&kp LC(LS(C))>;
       };
       combo_paste_terminal {
         timeout-ms = <50>;
 	key-positions = <38 40>;
-	bindings = <&kp LC(LS(V));
+	bindings = <&kp LC(LS(V))>;
       };
     };
 };
