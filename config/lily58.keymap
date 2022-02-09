@@ -20,7 +20,7 @@
       combo_switch_layout {
         timeout-ms = <50>;
 	key-positions = <37 38>;
-	bindings = <&kp LALT(LSHIFT)>;
+	bindings = <&kp LA(LSHIFT)>;
       };
       combo_wspace_left {
         timeout-ms = <50>;
