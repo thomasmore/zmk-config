@@ -54,13 +54,13 @@
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |  '  |  <  |  >   |  "   |  .   |                   |  &   |       |  [    |  ]   |   %   |       |
+// |       |  '  |  <  |  >   |  "   |  .   |                   |  &   |  ,    |  [    |  ]   |   %   |       |
 // |       |  !  |  -  |  +   |  =   |  #   |                   |  |   |  :    |  (    |  )   |   ?   |       |
 // |       |  ^  |  /  |  *   |  \   |      |        |  |       |  ~   |  $    |  {    |  }   |   @   |       |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
 &trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
-&trans     &kp APOS         &kp LT            &kp GT            &kp DQT      &kp DOT                      &kp AMPS  &trans    &kp LBKT        &kp RBKT  &kp PRCNT &trans
+&trans     &kp APOS         &kp LT            &kp GT            &kp DQT      &kp DOT                      &kp AMPS  &kp COMMA &kp LBKT        &kp RBKT  &kp PRCNT &trans
 &trans     &kp EXCL         &kp MINUS         &kp PLUS          &kp EQUAL    &kp HASH                     &kp PIPE  &kp COLON &kp LPAR        &kp RPAR  &kp QMARK &trans
 &trans     &kp CARET        &kp FSLH          &kp STAR          &kp BSLH     &trans    &trans   &trans    &kp TILDE &kp DLLR  &kp LBRC        &kp RBRC  &kp AT    &trans
                                               &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
