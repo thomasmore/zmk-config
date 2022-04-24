@@ -28,6 +28,19 @@
       };
     };
 
+    macros {
+        ZMK_MACRO(updir,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+        )
+        ZMK_MACRO(nmspc,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp COLON &kp COLON>;
+        )
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -60,15 +73,15 @@
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |  '  |  <  |  >   |  "   |  .   |                   |  &   |  ,    |  [    |  ]   |   %   |       |
+// |       |  '  |  <  |  >   |  "   |  .   |                   |  &   |  ::   |  [    |  ]   |   %   |       |
 // |       |  !  |  -  |  +   |  =   |  #   |                   |  |   |  :    |  (    |  )   |   ?   |       |
-// |       |  ^  |  /  |  *   |  \   |      |C(S(TAB)|  |LC(TAB)|  ~   |  $    |  {    |  }   |   @   |       |
+// |       |  ^  |  /  |  *   |  \   | ../  |C(S(TAB)|  |LC(TAB)|  ~   |  $    |  {    |  }   |   @   |       |
 //                     |      |      |      |        |  |       |ADJUST|       |       |
 			bindings = <
 &trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
-&trans     &kp APOS         &kp LT            &kp GT            &kp DQT      &kp DOT                      &kp AMPS  &kp COMMA &kp LBKT        &kp RBKT  &kp PRCNT &trans
+&trans     &kp APOS         &kp LT            &kp GT            &kp DQT      &kp DOT                      &kp AMPS  &nmspc    &kp LBKT        &kp RBKT  &kp PRCNT &trans
 &trans     &kp EXCL         &kp MINUS         &kp PLUS          &kp EQUAL    &kp HASH                     &kp PIPE  &kp COLON &kp LPAR        &kp RPAR  &kp QMARK &trans
-&trans     &kp CARET        &kp FSLH          &kp STAR          &kp BSLH     &trans    &kp LC(LS(TAB))   &kp LC(TAB)    &kp TILDE &kp DLLR  &kp LBRC        &kp RBRC  &kp AT    &trans
+&trans     &kp CARET        &kp FSLH          &kp STAR          &kp BSLH     &updir    &kp LC(LS(TAB))   &kp LC(TAB)    &kp TILDE &kp DLLR  &kp LBRC        &kp RBRC  &kp AT    &trans
                                               &trans            &trans       &trans    &trans   &trans    &mo 2    &trans    &trans
 			>;
 
