@@ -108,13 +108,13 @@
 
 		adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 | rst  | boot |                   |      |       |       |      |  rst  |  boot |
+// | BTCLR | BT1 | BT2 |  BT3 |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &reset &bootloader      &trans      &trans    &trans    &trans   &reset    &bootloader
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans      &trans      &trans    &trans    &trans   &trans    &trans
 &trans   &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans   &trans   &trans   &trans
 &trans   &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans   &trans   &trans   &trans
 &trans   &trans   &trans   &trans   &trans   &trans   &trans  &trans &trans   &trans   &trans   &trans   &trans   &trans
