@@ -26,6 +26,12 @@
 	key-positions = <22 23>;
 	bindings = <&kp RBKT>;
       };
+      // temporal workaround
+      combo_b {
+        timeout-ms = <50>;
+	key-positions = <39 40>;
+	bindings = <&kp B>;
+      };
     };
 
     macros {
@@ -72,13 +78,13 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |  '  |  <  |  >   |  "   |  .   |                   |  &   |  ::   |  [    |  ]   |   %   |       |
 // |       |  !  |  -  |  +   |  =   |  #   |                   |  |   |  :    |  (    |  )   |   ?   |       |
 // |       |  ^  |  /  |  *   |  \   | ../  |C(S(TAB)|  |LC(TAB)|  ~   |  $    |  {    |  }   |   @   |       |
 //                     |      |      |      |        |  |       |ADJUST|       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans      &trans      &trans    &trans    &trans   &trans    &trans
+&trans     &trans           &trans            &trans            &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
 &trans     &kp APOS         &kp LT            &kp GT            &kp DQT      &kp DOT                      &kp AMPS  &nmspc    &kp LBKT        &kp RBKT  &kp PRCNT &trans
 &trans     &kp EXCL         &kp MINUS         &kp PLUS          &kp EQUAL    &kp HASH                     &kp PIPE  &kp COLON &kp LPAR        &kp RPAR  &kp QMARK &trans
 &trans     &kp CARET        &kp FSLH          &kp STAR          &kp BSLH     &updir    &kp LC(LS(TAB))   &kp LC(TAB)    &kp TILDE &kp DLLR  &kp LBRC        &kp RBRC  &kp AT    &trans
