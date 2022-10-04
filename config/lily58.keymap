@@ -26,12 +26,6 @@
 	key-positions = <22 23>;
 	bindings = <&kp RBKT>;
       };
-      // temporal workaround
-      combo_b {
-        timeout-ms = <50>;
-	key-positions = <39 40>;
-	bindings = <&kp B>;
-      };
     };
 
     macros {
