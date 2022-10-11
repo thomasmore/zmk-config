@@ -12,7 +12,7 @@
 /* TODO:
   * change layout switcher to gui+space
   * move ctrl-shift to HOLD(gui+space)
-  * ctrl-c ctrl-v on hold c and v
+  * ctrl-shift-c ctrl-shift-v on hold c and v
   * add alt on right half
   * add print screen instead of ctrl-shift
   * add ctrl- <- and ctrl- -> on hold
