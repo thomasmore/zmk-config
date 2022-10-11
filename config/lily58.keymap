@@ -16,6 +16,7 @@
   * add alt on right half
   * add print screen instead of ctrl-shift
   * add ctrl- <- and ctrl- -> on hold
+  * add bluetooth profile
 */
 
 &mt {
