@@ -66,18 +66,12 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   _   |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   [   |
-// | A(SH) |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | C(SH) |  Z  |  X  |  C   |  V   |  B   |  sp l  |  | sp r  |  N   |  M    |  ,    |  .   |   /   |   \   |
-//            | GUI  | ALT/DEL |TAB/LOWER|SPACE/CTRL|  |BSPC/SHIFT|ENTER/RAISE|  DEL  | GUI   |
 			bindings = <
 &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp UNDER
 &kp ESC   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp LBKT
-&kp LA(LSHIFT) &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LC(LSHIFT) &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LC(RG(LEFT))   &kp LC(RG(RIGHT)) &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
-          &kp RGUI  &mt LALT DEL &lt 1 TAB  &mt LCTRL SPACE      &mt RSHIFT BSPC &lt 2 RET &kp DEL &kp RGUI
+&mt LC(LSHIFT) RG(SPACE) &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&mt C_AL_CALC PSCRN &kp Z  &kp X  &mt LC(LS(C)) C    &mt LC(LS(V)) V    &kp B  &kp LC(RG(LEFT))   &kp LC(RG(RIGHT)) &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp BSLH
+          &kp RGUI  &mt LALT DEL &lt 1 TAB  &mt LCTRL SPACE      &mt RSHIFT BSPC &lt 2 RET &mt RALT DEL &kp RGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -111,7 +105,7 @@
 			bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans   &trans
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &mt LC(LEFT) LEFT    &kp DOWN  &kp UP    &mt LC(RIGHT) RIGHT &trans   &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &kp LC(LS(TAB))   &kp LC(TAB)    &trans      &trans    &trans    &trans  &trans  &trans
                         &trans  &trans  &mo 1    &trans   &trans    &trans      &trans    &trans
 			>;
@@ -121,16 +115,16 @@
 
 		adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |      |      |                   |      |       |       |      |       |       |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   | MUTE |  PREV | NEXT  |      |       |       |
+// |       |     |     |      |      |      |  VOL-  |  | VOL+  |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans      &trans      &trans    &trans    &trans   &trans    &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans      &trans      &trans    &trans    &trans   &trans    &trans
 &trans   &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans   &trans   &trans   &trans
-&trans   &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans   &trans   &trans   &trans
-&trans   &trans   &trans   &trans   &trans   &trans   &trans  &trans &trans   &trans   &trans   &trans   &trans   &trans
+&trans   &trans   &trans   &trans   &trans   &trans                  &kp C_MUTE   &kp C_PREV   &kp C_NEXT &trans   &trans   &trans
+&trans   &trans   &trans   &trans   &trans   &trans   &kp C_VOL_DN  &kp C_VOL_UP &trans   &trans   &trans   &trans   &trans   &trans
                         &trans  &trans  &trans   &trans     &trans   &trans   &trans   &trans
 			>;
 
