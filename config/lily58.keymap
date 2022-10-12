@@ -19,6 +19,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "TAP_PREF_HOLD_TAP";
         #binding-cells = <2>;
+	tapping-term-ms = <200>;
         quick-tap-ms = <400>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
