@@ -37,6 +37,12 @@
 	key-positions = <22 23>;
 	bindings = <&kp RBKT>;
       };
+      // workaround
+      combo_y {
+        timeout-ms = <50>;
+        key-positions = <19 20>;
+        bindings = <&kp y>;
+      };
     };
 
     macros {
