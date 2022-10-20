@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/thomasmore
   projects:
     - name: zmk
-      remote: thomasmore
-      revision: i-suck-at-configuring-zmk
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
